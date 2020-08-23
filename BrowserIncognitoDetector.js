@@ -1,7 +1,7 @@
 async function chrome76Detection() {
 	if ('storage' in navigator && 'estimate' in navigator.storage) {
 		const {usage, quota} = await navigator.storage.estimate();
-		if(quota < 120000000)
+		if(quota < 1200000000)
 			return true;
 		else
 			return false;
